@@ -5,7 +5,7 @@ import { formatCurrency } from "../utils/formatCurrency";
 
 export default function Productcard({ images, slug, title, price, brand }) {
   return (
-    <Link to={`/product/${slug}`}>
+    <Link to={`/products/${slug}`}>
       <div className="position-relative text-danger">
         <div className="h-100 w-100 d-none d-lg-flex position-absolute top-0 hover-me ">
         <Button

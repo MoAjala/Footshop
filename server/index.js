@@ -8,7 +8,7 @@ import productRoutes from "./routes/product.js";
 import authRoutes from "./routes/authUser.js"
 import searchRoutes from "./routes/search.js"
 import categoryRoutes from "./routes/categories.js"
-
+import orderRoutes from "./routes/orders.js"
 
 const app = express();
 dotenv.config();
@@ -32,6 +32,7 @@ app.use("/api/products", productRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/catalog", searchRoutes);
 app.use("/api/categories", categoryRoutes);
+app.use("/api/orders", orderRoutes);
 
 app.get("/", (req, res) => {
   res.send("app is running");

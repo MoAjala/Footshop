@@ -2,7 +2,7 @@ import Product from "../model/Product.js";
 export const getProductBySearch = async (req, res) => {
   const query = req.query.q;
   try {
-    const result = await Product.findOne({
+    const result = await Product.find({
       title: { $regex: query, $options: "i" },
     }).limit(20);
     res.status(200).json(result);

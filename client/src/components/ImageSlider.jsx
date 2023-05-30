@@ -26,7 +26,7 @@ export default  function ImageSlider({casualPicks}) {
         <div key={index}>
           {index === current && (
             <div className="d-lg-flex align-items-center flex-row-reverse">
-              <Link to={`/product/${pick.slug}`}>
+              <Link to={`/products/${pick.slug}`}>
                 <div className="'resizeA">
                   <Image
                     src={pick.images[0]}
@@ -43,7 +43,7 @@ export default  function ImageSlider({casualPicks}) {
                 <p className="text-danger fs-5 mt-4 mt-lg-0">
                   {formatCurrency(pick.price)}
                 </p>
-                <Link to={`/product/${pick.slug}`}>
+                <Link to={`/products/${pick.slug}`}>
                   <Button
                     className="w-100 rounded-0"
                     size="lg"
